@@ -1,0 +1,15 @@
+.list {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+}
+
+.list li {
+   display: flex;
+   column-gap: 10px;
+}
+
+.list button {
+   margin-left: 30px;
+}
