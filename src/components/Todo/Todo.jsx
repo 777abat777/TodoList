@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { addTodo } from './../../store/TodoSlice';
-import { useState } from 'react';
+import { addTodo, fetchTodos } from './../../store/TodoSlice';
+import { useState, useEffect } from 'react';
 import TodoList from './TodoList/TodoList';
 import style from './Todo.module.css'
 
@@ -19,6 +19,10 @@ const Todo = () => {
          setTuskText('')
       }
    }
+
+   useEffect(() => {
+      dispatch(fetchTodos())
+   }, [dispatch])
 
    return (
       <div className={style.todo}>
