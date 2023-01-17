@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addTodo, fetchTodos } from './../../store/TodoSlice';
+import { fetchTodos, addNewTodo } from './../../store/TodoSlice';
 import { useState, useEffect } from 'react';
 import TodoList from './TodoList/TodoList';
 import style from './Todo.module.css'
@@ -15,7 +15,7 @@ const Todo = () => {
    const dispatch = useDispatch()
    const addTusk = () => {
       if (tuskText.length > 0) {
-         dispatch(addTodo({ text: tuskText }))
+         dispatch(addNewTodo(tuskText))
          setTuskText('')
       }
    }
